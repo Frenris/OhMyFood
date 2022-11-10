@@ -4,11 +4,12 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/41cd476dfe.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="css/style.css">
         <title>Oh my food</title>
     </head>
     <body>
         <header>
-            <div id="header-logo"><img src="images/ohmyfood.png" alt="logo oh my food."></div>
+            <div id="header__logo"><img src="images/ohmyfood.png" alt="logo oh my food."></div>
         </header>
         <main>
             <div id="location">
@@ -18,15 +19,15 @@
                 </form>
             </div>
             <div id="introduction">
-                <h1>Réservez le menu qui vous convient</h1>
+                <h1 class="introduction_heading">Réservez le menu qui vous convient</h1>
                 <p>Découvrez des restaurants d'exception, sélectionnés par nos soins.</p>
-                <a href="#">
+                <a class="btn-explore" href="#">
                     <p>Explorer nos restaurants</p>
                 </a>
             </div>
             <section id="functioning">
                 <article>
-                    <h1>Fonctionnements</h1>
+                    <h1 class="functioning__heading">Fonctionnements</h1>
                     <div id="first">
                         <div class="number">
                             <p>1</p>
@@ -43,7 +44,7 @@
                         </div>
                         <div id="compose">
                             <a href="#">
-                                <p><i class="fa-solid fa-ellipsis-vertical"></i><i class="fa-solid fa-bars"></i>Composez votre menu</p>
+                                <p><i class="fa-solid fa-list-ul"></i>Composez votre menu</p>
                             </a>
                         </div>
                     </div>
@@ -51,7 +52,7 @@
                         <div class="number">
                             <p>3</p>
                         </div>
-                        <div id="choose">
+                        <div id="eat">
                             <a href="#">
                                 <p><i class="fa-solid fa-store"></i>Dégustez au restaurant</p>
                             </a>
@@ -61,15 +62,15 @@
             </section>
             <section id="restaurants">
                 <article>
-                    <h1>Restaurants</h1>
-                    <div id="restaurant-cards">
-                        <ul>
-                            <li class="restaurant-card">
+                    <h1 class="restaurants__heading">Restaurants</h1>
+                    <div id="restaurant__cards">
+                        <ul class="list">
+                            <li class="restaurant__card">
                                 <a href="#">
                                     <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant.">
-                                    <div class="description">
-                                        <div class="title">
-                                            <h2>La palette du goût</h2>
+                                    <div class="restaurant">
+                                        <div class="description">
+                                            <h2 class="desciption__heading">La palette du goût</h2>
                                             <p>Ménilmontant</p>
                                         </div>
                                         <div id="heart">
@@ -80,12 +81,12 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="restaurant-card">
+                            <li class="restaurant__card">
                                 <a href="#">
                                     <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du restaurant.">
-                                    <div class="description">
-                                        <div class="title">
-                                            <h2>La note enchantée</h2>
+                                    <div class="restaurant">
+                                        <div class="description">
+                                            <h2 class="desciption__heading">La note enchantée</h2>
                                             <p>Charonne</p>
                                         </div>
                                         <div id="heart">
@@ -96,12 +97,12 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="restaurant-card">
+                            <li class="restaurant__card">
                                 <a href="#">
                                     <img src="images/toa-heftiba-DQKerTsQwi0-unsplash.jpg" alt="photo du restaurant.">
-                                    <div class="description">
-                                        <div class="title">
-                                            <h2>&Agrave; la française</h2>
+                                    <div class="restaurant">
+                                        <div class="description">
+                                            <h2 class="description__heading">&Agrave; la française</h2>
                                             <p>Cité Rouge</p>
                                         </div>
                                         <div id="heart">
@@ -112,12 +113,12 @@
                                     </div>
                                 </a>
                             </li>
-                            <li class="restaurant-card">
+                            <li class="restaurant__card">
                                 <a href="#">
                                     <img src="images/louis-hansel-shotsoflouis-qNBGVyOCY8Q-unsplash.jpg" alt="photo du restaurant.">
-                                    <div class="description">
-                                        <div class="title">
-                                            <h2>Le délice des sens</h2>
+                                    <div class="restaurant">
+                                        <div class="description">
+                                            <h2 class="description__heading">Le délice des sens</h2>
                                             <p>Folie-Méricourt</p>
                                         </div>
                                         <div id="heart">
@@ -133,13 +134,17 @@
             </section>
         </main>
         <footer>
-            <div id="footer-logo"><img src="images/ohmyfood.png" alt="logo oh my food."></div>
-            <ul>
-                <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
-                <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
-                <li><a href="#">Mentions légales</a></li>
-                <li><a href="#">Contact</a></li>
-            </ul>
+            <section>
+                <article>
+                    <h2 class="footer__heading">ohmyfood</h2>
+                    <ul class="list">
+                        <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
+                        <li><a href="#"><i class="fa-solid fa-handshake-angle"></i>Devenir partenaire</a></li>
+                        <li><a href="#">Mentions légales</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </article>
+            </section>
         </footer>
     </body>
 </html>
