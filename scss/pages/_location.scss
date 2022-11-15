@@ -1,0 +1,27 @@
+#location {
+    background-color: $grey-dark;
+    form {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.fa-location-dot {
+    color: black;
+    position: absolute;
+    margin-top: 30px;
+    margin-left: -180px;
+}
+
+#search {
+    padding: 12px 0 12px 30px;
+    & input {
+    border:none;
+    background-color: $grey-dark; 
+    }
+    & input::placeholder {
+    color: black;
+    font-size: 18px;
+    font-family: "Roboto", sans-serif;
+    }
+}

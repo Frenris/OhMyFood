@@ -1,0 +1,22 @@
+{
+  "name": "projet-3",
+  "version": "1.0.0",
+  "description": "projet oh my food",
+  "main": "index.js",
+  "scripts": {
+    "sass": "sass --watch ./scss/style.scss:./css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Frenris/OhMyFood.git"
+  },
+  "keywords": [
+    "D&cheance2017"
+  ],
+  "author": "frederic demeaux",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Frenris/OhMyFood/issues"
+  },
+  "homepage": "https://github.com/Frenris/OhMyFood#readme"
+}
