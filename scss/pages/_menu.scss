@@ -1,0 +1,30 @@
+.menu {
+    display:flex;
+    flex-direction: column;
+    position:absolute;
+    width: 100%;
+    background-color: $grey-light;
+    border-top-left-radius: 25px;
+    border-top-right-radius: 25px;
+    margin-top: 200px;
+}
+
+h2.type {
+    color: $grey-dark;
+    margin-left:5%;
+    font-size:18px;
+}
+
+h3.title {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.recipe, .price {
+    font-size: 12px;
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-between;
+}

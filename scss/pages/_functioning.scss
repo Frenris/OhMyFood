@@ -1,0 +1,40 @@
+#functioning, #restaurants {
+    margin-left: 15px;
+}
+
+.number p {
+    position: absolute;
+    color:white;
+    margin: 25px 0 0 15px;
+    background-color: $primary-color;
+    border: 1px solid $primary-color;
+    border-radius: 20px;
+    padding: 5px;
+    width: 15px;
+}
+
+a {
+    text-decoration: none;
+}
+
+.fa-mobile-screen-button, .fa-list-ul, .fa-store {
+    color:$grey-dark;
+    padding: 15px;
+}
+
+#choose a p, #compose  a p, #eat a p {
+    color: black;
+    margin: 20px;
+    padding: 15px;
+    border: 1px solid rgb(250, 250, 250);
+    border-radius: 30px;
+    background-color: rgb(250, 250, 250);
+    @include box-shadow;
+    transition: all 600ms;
+    &:hover {
+        background-color: $secondary-color;
+        .fa-solid {
+            color: $primary-color;
+        }
+    }
+}
