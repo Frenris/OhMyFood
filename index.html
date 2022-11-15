@@ -15,7 +15,7 @@
             <div id="location">
                 <form>
                     <i class="fa-solid fa-location-dot"></i>
-                    <p class="search"><input type="text" name="location" ></p>
+                    <p id="search"><input type="search" name="location" placeholder="Paris, Belleville"></p>
                 </form>
             </div>
             <div id="introduction">
@@ -62,20 +62,24 @@
             </section>
             <section id="restaurants">
                 <article>
-                    <h1 class="restaurants__heading">Restaurants</h1>
+                    <h1>Restaurants</h1>
                     <div id="restaurant__cards">
                         <ul class="list">
                             <li class="restaurant__card">
                                 <a href="#">
+                                    <div class="new__restaurant">
+                                        <p>Nouveau</p>
+                                    </div>
                                     <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant.">
                                     <div class="restaurant">
                                         <div class="description">
                                             <h2 class="desciption__heading">La palette du goût</h2>
                                             <p>Ménilmontant</p>
                                         </div>
-                                        <div id="heart">
+                                        <div class="btn__like">
                                             <a href="#">
-                                                <i class="fa-regular fa-heart"></i>
+                                                <i class="fa-regular fa-heart heart-empty"></i>
+                                                <i class="fa-solid fa-heart heart-color"></i>
                                             </a>
                                         </div>
                                     </div>
@@ -83,13 +87,16 @@
                             </li>
                             <li class="restaurant__card">
                                 <a href="#">
+                                    <div class="new__restaurant">
+                                        <p>Nouveau</p>
+                                    </div>
                                     <img src="images/stil-u2Lp8tXIcjw-unsplash.jpg" alt="photo du restaurant.">
                                     <div class="restaurant">
                                         <div class="description">
                                             <h2 class="desciption__heading">La note enchantée</h2>
                                             <p>Charonne</p>
                                         </div>
-                                        <div id="heart">
+                                        <div class="btn__like">
                                             <a href="#">
                                                 <i class="fa-regular fa-heart"></i>
                                             </a>
@@ -105,7 +112,7 @@
                                             <h2 class="description__heading">&Agrave; la française</h2>
                                             <p>Cité Rouge</p>
                                         </div>
-                                        <div id="heart">
+                                        <div class="btn__like">
                                             <a href="#">
                                                 <i class="fa-regular fa-heart"></i>
                                             </a>
@@ -121,7 +128,7 @@
                                             <h2 class="description__heading">Le délice des sens</h2>
                                             <p>Folie-Méricourt</p>
                                         </div>
-                                        <div id="heart">
+                                        <div class="btn__like">
                                             <a href="#">
                                                 <i class="fa-regular fa-heart"></i>
                                             </a>
@@ -134,8 +141,6 @@
             </section>
         </main>
         <footer>
-            <section>
-                <article>
                     <h2 class="footer__heading">ohmyfood</h2>
                     <ul class="list">
                         <li><a href="#"><i class="fa-solid fa-utensils"></i>Proposer un restaurant</a></li>
@@ -143,8 +148,6 @@
                         <li><a href="#">Mentions légales</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
-                </article>
-            </section>
         </footer>
     </body>
 </html>

@@ -17,6 +17,7 @@
   border-radius: 30px;
   background: linear-gradient(#FF79DA, #9356DC);
   box-shadow: 0px 10px 15px rgb(126, 126, 126);
+  transition: all 1200ms;
 }
 .btn-explore p:hover {
   background: linear-gradient(#fcaee6, #FF79DA);
@@ -24,6 +25,18 @@
 
 ul.list {
   list-style-type: none;
+}
+
+ul.plate {
+  list-style-type: none;
+  padding: 0;
+}
+
+li.choice {
+  background-color: white;
+  border-radius: 25px;
+  padding: 1px 5px;
+  margin: 5%;
 }
 
 body {
@@ -37,7 +50,7 @@ body {
 #header__logo {
   display: flex;
   justify-content: center;
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(235, 235, 235);
 }
 #header__logo img {
   width: 150px;
@@ -46,7 +59,14 @@ body {
   margin-top: 30px;
 }
 
+.fa-arrow-left {
+  color: black;
+  margin-top: 35px;
+}
+
 footer {
+  display: flex;
+  position: relative;
   background-color: rgb(71, 71, 71);
 }
 footer .fa-utensils, footer .fa-handshake-angle {
@@ -68,7 +88,7 @@ footer ul li a {
 }
 
 #location {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(223, 223, 223);
 }
 #location form {
   display: flex;
@@ -78,22 +98,30 @@ footer ul li a {
 .fa-location-dot {
   color: black;
   position: absolute;
-  margin-top: 15px;
+  margin-top: 30px;
   margin-left: -180px;
 }
 
-.search {
+#search {
   padding: 12px 0 12px 30px;
+}
+#search input {
+  border: none;
+  background-color: rgb(223, 223, 223);
+}
+#search input::placeholder {
+  color: black;
+  font-size: 18px;
+  font-family: "Roboto", sans-serif;
 }
 
 #introduction {
-  background-color: rgb(250, 250, 250);
+  background-color: rgb(235, 235, 235);
   text-align: center;
   padding: 0 30px 30px 30px;
 }
 
 h1, h2 {
-  font-family: "Shrikhand", sans-serif;
   font-weight: bold;
 }
 
@@ -125,8 +153,8 @@ a {
   text-decoration: none;
 }
 
-.fa-solid {
-  color: rgb(231, 231, 231);
+.fa-mobile-screen-button, .fa-list-ul, .fa-store {
+  color: rgb(223, 223, 223);
   padding: 15px;
 }
 
@@ -138,6 +166,13 @@ a {
   border-radius: 30px;
   background-color: rgb(250, 250, 250);
   box-shadow: 0px 10px 15px rgb(126, 126, 126);
+  transition: all 600ms;
+}
+#choose a p:hover, #compose a p:hover, #eat a p:hover {
+  background-color: #FF79DA;
+}
+#choose a p:hover .fa-solid, #compose a p:hover .fa-solid, #eat a p:hover .fa-solid {
+  color: #9356DC;
 }
 
 #restaurants {
@@ -152,11 +187,11 @@ a {
 }
 
 .restaurant__card {
-  width: 90%;
+  width: 96%;
   height: 250px;
   background-color: white;
   border-radius: 20px;
-  margin: 20px 10px;
+  margin: 20px 2%;
   box-shadow: 0px 10px 15px rgb(126, 126, 126);
 }
 .restaurant__card img {
@@ -183,9 +218,72 @@ a {
   display: flex;
   justify-content: space-between;
 }
-.restaurant #heart .fa-heart {
+.restaurant .btn__like .heart-empty {
   margin: 15px;
   font-size: 30px;
+}
+.restaurant .btn__like .heart-color {
+  font-size: 30px;
+  color: linear-gradient #9356DC, #FF79DA;
+  background-clip: text;
+  -webkit-background-clip: text;
+}
+
+.new__restaurant {
+  display: flex;
+  position: absolute;
+  margin-top: 20px;
+  justify-content: center;
+  color: green;
+  background-color: #99E2D0;
+  width: 75px;
+  padding: 1px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.restaurant__picture img {
+  object-fit: cover;
+  width: 100%;
+}
+.restaurant__heading {
+  font-family: "Shrikhand", sans-serif;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.menu {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 100%;
+  background-color: rgb(235, 235, 235);
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  margin-top: 200px;
+}
+
+h2.type {
+  color: rgb(223, 223, 223);
+  margin-left: 5%;
+  font-size: 18px;
+}
+
+h3.title {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.recipe, .price {
+  font-size: 12px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
 }
 
 /*# sourceMappingURL=style.css.map */
