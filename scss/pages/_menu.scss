@@ -10,21 +10,12 @@
 }
 
 h2.type {
-    color: $grey-dark;
-    margin-left:5%;
-    font-size:18px;
+    text-transform: uppercase;
+    color: black;
+    margin-left:15px;
+    font-size:15px;
+    border-bottom: 2px solid $tertiary-color;
 }
 
-h3.title {
-    font-size: 15px;
-    margin-bottom: 5px;
-}
 
-.recipe, .price {
-    font-size: 12px;
-}
 
-.recipe {
-    display: flex;
-    justify-content: space-between;
-}

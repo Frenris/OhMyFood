@@ -9,37 +9,59 @@
     </head>
     <body>
         <header>
-            <a href="#"><i class="fa-solid fa-arrow-left"></i></a>
-            <div id="header__logo"><img src="images/ohmyfood.png" alt="logo oh my food."></div>
+            <div id="header__restaurant">
+                <a href="#"><i class="fa-solid fa-arrow-left header__back"></i></a>
+                <div id="header__logo"><img src="images/ohmyfood.png" alt="logo oh my food."></div>
+            </div>
         </header>
         <main>
             <div class="restaurant__picture">
             <img src="images/jay-wennington-N_Y88TWmGwA-unsplash.jpg" alt="photo du restaurant.">
             </div>
             <section class="menu">
-                <h1 class="restaurant__heading">La palette du goût</h1>
+                <div class="title">
+                    <h1 class="restaurant__heading">La palette du goût</h1>
+                    <div class="btn__like">
+                        <a href="#">
+                            <i class="fa-solid fa-heart heart-color"></i>
+                            <i class="fa-regular fa-heart heart-empty"></i>
+                        </a>
+                    </div>
+                </div>
                 <article>
                     <h2 class="type">Entrées</h2>
                     <ul class="plate">
-                        <li class="choice">
-                            <h3 class="title">Fricassée d'escargot</h3>
-                            <div class="recipe">
-                                <p>Au piment d'Espelette</p>
-                                <div class="price"><p><strong>25 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Fricassée d'escargot</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Au piment d'Espelette</p>
+                                        <div class="price"><p><strong>25 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="choice">
-                            <h3 class="title">Fois gras de canard mi-cuit</h3>
-                            <div class="recipe">
-                                <p>Et ses copeaux de truffes noire</p>
-                                <div class="price"><p><strong>35 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Foie gras de canard mi-cuit</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Et ses copeaux de truffe noire</p>
+                                        <div class="price"><p><strong>35 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="choice">
-                            <h3 class="title">Oeuf au plat</h3>
-                            <div class="recipe">
-                                <p>Assaisonné à la truffe sur lit de caviar</p>
-                                <div class="price"><p><strong>20 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Oeuf au plat</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Assaisonné à la truffe sur lit de caviar</p>
+                                        <div class="price"><p><strong>20 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
                     </ul>
@@ -47,26 +69,77 @@
                 <article>
                     <h2 class="type">Plats</h2>
                     <ul class="plate">
-                        <li class="choice">
-                            <h3 class="title">Filet de boeuf aux herbes</h3>
-                            <div class="recipe">
-                                <p>Accompagné de sa ribambelle de légumes</p>
-                                <div class="price"><p><strong>40 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Filet de boeuf aux herbes</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Accompagné de sa ribambelle de légumes</p>
+                                        <div class="price"><p><strong>40 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="choice">
-                            <h3 class="title">Parmentier de queue de boeuf</h3>
-                            <div class="recipe">
-                                <p>la truffe noire sur sa purée de panais</p>
-                                <div class="price"><p><strong>35 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Parmentier de queue de boeuf</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>&Agrave; la truffe noire sur sa purée de panais</p>
+                                        <div class="price"><p><strong>35 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
                         </li>
-                        <li class="choice">
-                            <h3 class="title">Filet de turbo</h3>
-                            <div class="recipe">
-                                <p>Aux agrumes</p>
-                                <div class="price"><p><strong>44 €</strong></p></div>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Filet de turbo</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Aux agrumes</p>
+                                        <div class="price"><p><strong>44 €</strong></p></div>
+                                    </div>
+                                </div>
                             </div>
+                        </li>
+                    </ul>
+                </article>
+                <article>
+                    <h2 class="type">Desserts</h2>
+                    <ul class="plate">
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Paris-Brest</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Revisité</p>
+                                        <div class="price"><p><strong>18 €</strong></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="presentation">
+                            <div>
+                                <h3 class="title">Macaron au chocolat d'exception</h3>
+                                <div class="choice">
+                                    <div class="recipe">
+                                        <p>Et la glace à la vanille de Madagascar</p>
+                                        <div class="price"><p><strong>22 €</strong></p></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </li>
+                        <li class="presentation">
+                                <div class="cooking">
+                                    <h3 class="title">Mousse au chocolat</h3>
+                                    <div class="choice">
+                                        <div class="recipe">
+                                            <p>Au piment d'Espelette et à la truffe noire</p>
+                                            <div class="price"><p><strong>23 €</strong></p></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="select"><i class="fa-regular fa-circle-check"></i></div>
                         </li>
                     </ul>
                 </article>

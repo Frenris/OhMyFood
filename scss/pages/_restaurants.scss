@@ -39,25 +39,36 @@
     }
 }
 
-.restaurant {
+.restaurant, .title {
     display:flex;
     justify-content: space-between;
     .btn__like {
+        .heart-color{
+            visibility: hidden;
+        }
         .heart-empty {
             margin:15px;
+            position: relative;
             font-size: 30px;
-    }
-        .heart-color {
-            font-size: 30px;
-            color: linear-gradient ($primary-color,$secondary-color);
-            background-clip: text;
-            -webkit-background-clip: text;
+            color: black;
+            z-index: 1;
         }
-}
+        &:hover {
+            .heart-color {
+                visibility: visible;
+                margin:15px ;
+                position: absolute;
+                font-size: 30px;
+                color: linear-gradient(180deg, $primary-color 0%,$secondary-color 50%);
+                z-index: 2;
+            }
+        }
+    }
 }
 
+
 .new__restaurant {
-    display: flex;
+    display: flex;;
     position:absolute;
     margin-top: 20px;
     justify-content:center;

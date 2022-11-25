@@ -32,11 +32,43 @@ ul.plate {
   padding: 0;
 }
 
-li.choice {
+li.presentation {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 25px;
   padding: 1px 5px;
-  margin: 5%;
+  margin: 15px;
+}
+li.presentation .fa-circle-check {
+  display: none;
+}
+li.presentation:hover {
+  width: 70%;
+  border-radius: 25px 0 0 25px;
+}
+li.presentation:hover .fa-circle-check {
+  display: flex;
+  position: absolute;
+  background-color: #99E2D0;
+  font-size: 30px;
+  color: white;
+  padding: 23px;
+  border-radius: 0 25px 25px 0;
+}
+
+h3.title {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.recipe, .price {
+  font-size: 12px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
 }
 
 body {
@@ -47,16 +79,18 @@ body {
 #header {
   width: 100%;
 }
-#header__logo {
+#header__logo img {
   display: flex;
   justify-content: center;
-  background-color: rgb(235, 235, 235);
-}
-#header__logo img {
   width: 150px;
   height: auto;
   margin: 15px;
   margin-top: 30px;
+}
+#header__restaurant {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(235, 235, 235);
 }
 
 .fa-arrow-left {
@@ -67,6 +101,7 @@ body {
 footer {
   display: flex;
   position: relative;
+  flex-direction: column;
   background-color: rgb(71, 71, 71);
 }
 footer .fa-utensils, footer .fa-handshake-angle {
@@ -123,6 +158,7 @@ footer ul li a {
 
 h1, h2 {
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -214,19 +250,27 @@ a {
   color: black;
 }
 
-.restaurant {
+.restaurant, .title {
   display: flex;
   justify-content: space-between;
 }
-.restaurant .btn__like .heart-empty {
-  margin: 15px;
-  font-size: 30px;
+.restaurant .btn__like .heart-color, .title .btn__like .heart-color {
+  visibility: hidden;
 }
-.restaurant .btn__like .heart-color {
+.restaurant .btn__like .heart-empty, .title .btn__like .heart-empty {
+  margin: 15px;
+  position: relative;
   font-size: 30px;
-  color: linear-gradient #9356DC, #FF79DA;
-  background-clip: text;
-  -webkit-background-clip: text;
+  color: black;
+  z-index: 1;
+}
+.restaurant .btn__like:hover .heart-color, .title .btn__like:hover .heart-color {
+  visibility: visible;
+  margin: 15px;
+  position: absolute;
+  font-size: 30px;
+  color: linear-gradient(180deg, #9356DC 0%, #FF79DA 50%);
+  z-index: 2;
 }
 
 .new__restaurant {
@@ -251,8 +295,13 @@ main {
 }
 .restaurant__heading {
   font-family: "Shrikhand", sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 15px;
+  padding-top: 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu {
@@ -267,23 +316,11 @@ main {
 }
 
 h2.type {
-  color: rgb(223, 223, 223);
-  margin-left: 5%;
-  font-size: 18px;
-}
-
-h3.title {
+  text-transform: uppercase;
+  color: black;
+  margin-left: 15px;
   font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.recipe, .price {
-  font-size: 12px;
-}
-
-.recipe {
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 2px solid #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

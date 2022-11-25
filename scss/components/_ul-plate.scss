@@ -3,9 +3,41 @@ ul.plate {
     padding: 0;
 }
 
-li.choice {
+li.presentation {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     border-radius: 25px;
     padding: 1px 5px;
-    margin: 5%;
+    margin: 15px;
+    .fa-circle-check {
+        display:none;
+    }
+    &:hover {
+        width: 70%;
+        border-radius: 25px 0 0 25px;
+        .fa-circle-check {
+            display: flex;
+            position: absolute;
+            background-color: $tertiary-color;
+            font-size: 30px;
+            color: white;
+            padding: 23px;
+            border-radius: 0 25px 25px 0;
+        }
+    }
+}
+
+h3.title {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.recipe, .price {
+    font-size: 12px;
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-between;
 }
