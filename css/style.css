@@ -1,3 +1,12 @@
+@keyframes opacity-plate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url(https://fonts.google.com/specimen/Shrikhand?query=shri);
@@ -40,21 +49,32 @@ li.presentation {
   padding: 1px 5px;
   margin: 15px;
 }
-li.presentation .fa-circle-check {
-  display: none;
+li.presentation .select {
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 25px 25px 0;
+  background-color: #99E2D0;
+  translate: 65px;
+  transition: all 2000ms;
 }
-li.presentation:hover {
-  width: 70%;
-  border-radius: 25px 0 0 25px;
+li.presentation .fa-circle-check {
+  position: absolute;
+  font-size: 30px;
+  margin: 25px;
+  color: white;
+  transition: transform 1000ms;
+}
+li.presentation:hover .select {
+  transform: translateX(-60px);
 }
 li.presentation:hover .fa-circle-check {
-  display: flex;
-  position: absolute;
-  background-color: #99E2D0;
-  font-size: 30px;
-  color: white;
-  padding: 23px;
-  border-radius: 0 25px 25px 0;
+  transform: rotate(360deg);
+}
+
+li.starter-1, li.plate-1, li.dessert-1 {
+  margin-top: 30px;
 }
 
 h3.title {
@@ -79,9 +99,11 @@ body {
 #header {
   width: 100%;
 }
-#header__logo img {
+#header__logo {
   display: flex;
   justify-content: center;
+}
+#header__logo img {
   width: 150px;
   height: auto;
   margin: 15px;
@@ -262,15 +284,20 @@ a {
   position: relative;
   font-size: 30px;
   color: black;
-  z-index: 1;
+}
+.restaurant .btn__like:hover .heart-empty, .title .btn__like:hover .heart-empty {
+  transform: scale(0);
 }
 .restaurant .btn__like:hover .heart-color, .title .btn__like:hover .heart-color {
   visibility: visible;
   margin: 15px;
   position: absolute;
   font-size: 30px;
-  color: linear-gradient(180deg, #9356DC 0%, #FF79DA 50%);
-  z-index: 2;
+  background: linear-gradient(#9356dc, #ff79da);
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(1);
 }
 
 .new__restaurant {
@@ -313,6 +340,21 @@ main {
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   margin-top: 200px;
+}
+.menu article .plate .starter-1, .menu article .plate .plate-1, .menu article .plate .dessert-1 {
+  opacity: 0;
+  animation: opacity-plate 600ms 200ms;
+  animation-fill-mode: forwards;
+}
+.menu article .plate .starter-2, .menu article .plate .plate-2, .menu article .plate .dessert-2 {
+  opacity: 0;
+  animation: opacity-plate 600ms 400ms;
+  animation-fill-mode: forwards;
+}
+.menu article .plate .starter-3, .menu article .plate .plate-3, .menu article .plate .dessert-3 {
+  opacity: 0;
+  animation: opacity-plate 600ms 600ms;
+  animation-fill-mode: forwards;
 }
 
 h2.type {

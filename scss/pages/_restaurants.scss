@@ -51,16 +51,22 @@
             position: relative;
             font-size: 30px;
             color: black;
-            z-index: 1;
         }
+
         &:hover {
+            .heart-empty {
+                transform: scale(0);
+            }
             .heart-color {
                 visibility: visible;
                 margin:15px ;
                 position: absolute;
                 font-size: 30px;
-                color: linear-gradient(180deg, $primary-color 0%,$secondary-color 50%);
-                z-index: 2;
+                background: linear-gradient(#9356dc, #ff79da); 
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+				transform: scale(1);
             }
         }
     }
