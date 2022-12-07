@@ -1,7 +1,9 @@
 main {
     display: flex;
     flex-direction: column;
-}.restaurant{
+}
+
+.restaurant{
     &__picture {
         img {
             object-fit: cover;

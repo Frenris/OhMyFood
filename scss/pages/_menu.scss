@@ -1,12 +1,11 @@
 .menu {
     display:flex;
     flex-direction: column;
-    position:absolute;
     width: 100%;
     background-color: $grey-light;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin-top: 200px;
+    margin-top: -40px;
     article .plate .starter-1, article .plate .plate-1, article .plate .dessert-1{
         opacity: 0;
         animation: opacity-plate 600ms 200ms;
