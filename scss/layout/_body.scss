@@ -1,4 +1,24 @@
 body {
+    position: relative;
     font-family: 'Roboto', sans-serif;
     margin: 0px;
-   }
+}
+
+#loader {
+    z-index: 1;
+    position:absolute;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background: white;
+    animation: opacity-loader 5s;
+    animation-fill-mode: forwards;
+    .fa-loader {
+        z-index: 2;
+        position: absolute;
+        height: 150px;
+        width: 150px;
+        transform: loading 4s;
+    }
+}
