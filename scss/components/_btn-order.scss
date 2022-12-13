@@ -1,0 +1,19 @@
+.btn-order {
+    color: white;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+    p {
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 20px;
+        border: 1px solid $primary-color;
+        border-radius: 30px;
+        background: linear-gradient($secondary-color, $primary-color);
+        @include box-shadow;
+        transition: all 1200ms;
+        &:hover {
+            background: linear-gradient(#fcaee6, $secondary-color);
+        }
+    }
+}

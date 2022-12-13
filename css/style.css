@@ -1,9 +1,62 @@
+@keyframes opacity-plate {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(-10px);
+  }
+}
+@keyframes opacity-loader {
+  0% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes loading {
+  0% {
+    transform: rotate(0deg);
+    color: #9356DC;
+  }
+  50% {
+    color: #FF79DA;
+  }
+  100% {
+    transform: rotate(360deg);
+    color: #9356DC;
+  }
+}
 @font-face {
   font-family: "Shrikhand";
   src: url(https://fonts.google.com/specimen/Shrikhand?query=shri);
   font-family: "Roboto";
   src: url(https://fonts.google.com/specimen/Roboto?query=robo);
 }
+.btn-order {
+  color: white;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+.btn-order p {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+  border: 1px solid #9356DC;
+  border-radius: 30px;
+  background: linear-gradient(#FF79DA, #9356DC);
+  box-shadow: 0px 10px 15px rgb(126, 126, 126);
+  transition: all 1200ms;
+}
+.btn-order p:hover {
+  background: linear-gradient(#fcaee6, #FF79DA);
+}
+
 .btn-explore {
   color: white;
   display: flex;
@@ -32,16 +85,84 @@ ul.plate {
   padding: 0;
 }
 
-li.choice {
+li.presentation {
+  display: flex;
+  justify-content: space-between;
   background-color: white;
   border-radius: 25px;
   padding: 1px 5px;
-  margin: 5%;
+  margin: 15px;
+}
+li.presentation .select {
+  position: relative;
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 25px 25px 0;
+  background-color: #99E2D0;
+  translate: 65px;
+  transition: all 2000ms;
+}
+li.presentation .fa-circle-check {
+  position: absolute;
+  font-size: 30px;
+  margin: 25px;
+  color: white;
+  transition: transform 1000ms;
+}
+li.presentation:hover .select {
+  transform: translateX(-60px);
+}
+li.presentation:hover .fa-circle-check {
+  transform: rotate(360deg);
+}
+
+li.starter-1, li.plate-1, li.dessert-1 {
+  margin-top: 30px;
+}
+
+.cooking {
+  width: 100%;
+}
+
+h3.title {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.recipe, .price {
+  font-size: 12px;
+}
+
+.recipe {
+  display: flex;
+  justify-content: space-between;
+  background-color: blueviolet;
 }
 
 body {
+  position: relative;
   font-family: "Roboto", sans-serif;
   margin: 0px;
+}
+
+#loader {
+  z-index: 1;
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  background: white;
+  animation: opacity-loader 5s;
+  animation-fill-mode: forwards;
+}
+#loader .fa-loader {
+  z-index: 2;
+  position: absolute;
+  height: 150px;
+  width: 150px;
+  transform: loading 4s;
 }
 
 #header {
@@ -50,13 +171,17 @@ body {
 #header__logo {
   display: flex;
   justify-content: center;
-  background-color: rgb(235, 235, 235);
 }
 #header__logo img {
   width: 150px;
   height: auto;
   margin: 15px;
   margin-top: 30px;
+}
+#header__restaurant {
+  display: flex;
+  justify-content: center;
+  background-color: rgb(235, 235, 235);
 }
 
 .fa-arrow-left {
@@ -66,7 +191,7 @@ body {
 
 footer {
   display: flex;
-  position: relative;
+  flex-direction: column;
   background-color: rgb(71, 71, 71);
 }
 footer .fa-utensils, footer .fa-handshake-angle {
@@ -123,6 +248,7 @@ footer ul li a {
 
 h1, h2 {
   font-weight: bold;
+  font-family: "Roboto", sans-serif;
 }
 
 h1 {
@@ -187,6 +313,7 @@ a {
 }
 
 .restaurant__card {
+  position: relative;
   width: 96%;
   height: 250px;
   background-color: white;
@@ -214,25 +341,38 @@ a {
   color: black;
 }
 
-.restaurant {
+.restaurant, .title {
   display: flex;
   justify-content: space-between;
 }
-.restaurant .btn__like .heart-empty {
-  margin: 15px;
-  font-size: 30px;
+.restaurant .btn__like .heart-color, .title .btn__like .heart-color {
+  visibility: hidden;
 }
-.restaurant .btn__like .heart-color {
+.restaurant .btn__like .heart-empty, .title .btn__like .heart-empty {
+  margin: 15px;
+  position: relative;
   font-size: 30px;
-  color: linear-gradient #9356DC, #FF79DA;
+  color: black;
+}
+.restaurant .btn__like:hover .heart-empty, .title .btn__like:hover .heart-empty {
+  transform: scale(0);
+}
+.restaurant .btn__like:hover .heart-color, .title .btn__like:hover .heart-color {
+  visibility: visible;
+  margin: 15px;
+  position: absolute;
+  font-size: 30px;
+  background: linear-gradient(#9356dc, #ff79da);
   background-clip: text;
   -webkit-background-clip: text;
+  color: transparent;
+  transform: scale(1);
 }
 
 .new__restaurant {
-  display: flex;
   position: absolute;
-  margin-top: 20px;
+  top: 15px;
+  right: 15px;
   justify-content: center;
   color: green;
   background-color: #99E2D0;
@@ -251,39 +391,46 @@ main {
 }
 .restaurant__heading {
   font-family: "Shrikhand", sans-serif;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin: 0 15px;
+  padding-top: 15px;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
 }
 
 .menu {
   display: flex;
   flex-direction: column;
-  position: absolute;
   width: 100%;
   background-color: rgb(235, 235, 235);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-top: 200px;
+  margin-top: -40px;
+}
+.menu article .plate .starter-1, .menu article .plate .plate-1, .menu article .plate .dessert-1 {
+  opacity: 0;
+  animation: opacity-plate 600ms 200ms;
+  animation-fill-mode: forwards;
+}
+.menu article .plate .starter-2, .menu article .plate .plate-2, .menu article .plate .dessert-2 {
+  opacity: 0;
+  animation: opacity-plate 600ms 400ms;
+  animation-fill-mode: forwards;
+}
+.menu article .plate .starter-3, .menu article .plate .plate-3, .menu article .plate .dessert-3 {
+  opacity: 0;
+  animation: opacity-plate 600ms 600ms;
+  animation-fill-mode: forwards;
 }
 
 h2.type {
-  color: rgb(223, 223, 223);
-  margin-left: 5%;
-  font-size: 18px;
-}
-
-h3.title {
+  text-transform: uppercase;
+  color: black;
+  margin-left: 15px;
   font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.recipe, .price {
-  font-size: 12px;
-}
-
-.recipe {
-  display: flex;
-  justify-content: space-between;
+  border-bottom: 2px solid #99E2D0;
 }
 
 /*# sourceMappingURL=style.css.map */

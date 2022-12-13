@@ -12,6 +12,7 @@
 }
 
 .restaurant__card {
+    position: relative;
     width: 96%;
     height: 250px;
     background-color: white;
@@ -39,27 +40,44 @@
     }
 }
 
-.restaurant {
+.restaurant, .title {
     display:flex;
     justify-content: space-between;
     .btn__like {
+        .heart-color{
+            visibility: hidden;
+        }
         .heart-empty {
             margin:15px;
+            position: relative;
             font-size: 30px;
-    }
-        .heart-color {
-            font-size: 30px;
-            color: linear-gradient ($primary-color,$secondary-color);
-            background-clip: text;
-            -webkit-background-clip: text;
+            color: black;
         }
-}
+
+        &:hover {
+            .heart-empty {
+                transform: scale(0);
+            }
+            .heart-color {
+                visibility: visible;
+                margin:15px ;
+                position: absolute;
+                font-size: 30px;
+                background: linear-gradient(#9356dc, #ff79da); 
+				background-clip: text;
+				-webkit-background-clip: text;
+				color: transparent;
+				transform: scale(1);
+            }
+        }
+    }
 }
 
+
 .new__restaurant {
-    display: flex;
     position:absolute;
-    margin-top: 20px;
+    top: 15px;
+    right: 15px;
     justify-content:center;
     color: green;
     background-color: $tertiary-color;

@@ -1,3 +1,39 @@
 @mixin box-shadow {
     box-shadow: 0px 10px 15px rgb(126, 126, 126);
 }
+
+@keyframes opacity-plate {
+   0% {
+    opacity: 0;
+   }
+   100% {
+    opacity: 1;
+    transform: translateY(-10px);
+   }
+}
+
+@keyframes opacity-loader {
+    0% {
+        opacity: 1;
+       }
+    80% {
+        opacity: 1;
+       }
+    100% {
+        opacity: 0;
+       }
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+        color: $primary-color;
+    }
+    50% {
+        color: $secondary-color;
+    }
+    100% {
+        transform: rotate(360deg);
+        color: $primary-color;
+    }
+}

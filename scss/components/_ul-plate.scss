@@ -3,9 +3,59 @@ ul.plate {
     padding: 0;
 }
 
-li.choice {
+li.presentation {
+    display: flex;
+    justify-content: space-between;
     background-color: white;
     border-radius: 25px;
     padding: 1px 5px;
-    margin: 5%;
+    margin: 15px;
+    .select {
+        position: relative;
+        width:60px;
+        display: flex;
+        justify-content: center;
+        border-radius: 0 25px 25px 0;
+        background-color: $tertiary-color;
+        translate: 65px;
+        transition: all 2000ms;
+    }
+    .fa-circle-check {
+        position: absolute;
+        font-size: 30px;
+        margin: 25px;
+        color: white;
+        transition: transform 1000ms;
+    }
+    &:hover {
+        .select{
+            transform: translateX(-60px);
+        }
+        .fa-circle-check{
+            transform: rotate(360deg);
+        }
+    }
+}
+
+li.starter-1, li.plate-1, li.dessert-1 {
+    margin-top: 30px;
+}
+
+.cooking {
+    width: 100%;
+}
+
+h3.title {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.recipe, .price {
+    font-size: 12px;
+}
+
+.recipe {
+    display: flex;
+    justify-content: space-between;
+    background-color: blueviolet;
 }
