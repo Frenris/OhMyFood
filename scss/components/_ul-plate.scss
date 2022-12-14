@@ -11,9 +11,8 @@ li.presentation {
     padding: 1px 5px;
     margin: 15px;
     .select {
-        position: relative;
+        display: none;
         width:60px;
-        display: flex;
         justify-content: center;
         border-radius: 0 25px 25px 0;
         background-color: $tertiary-color;
@@ -21,7 +20,6 @@ li.presentation {
         transition: all 2000ms;
     }
     .fa-circle-check {
-        position: absolute;
         font-size: 30px;
         margin: 25px;
         color: white;
@@ -29,6 +27,7 @@ li.presentation {
     }
     &:hover {
         .select{
+            display: flex;
             transform: translateX(-60px);
         }
         .fa-circle-check{

@@ -94,9 +94,8 @@ li.presentation {
   margin: 15px;
 }
 li.presentation .select {
-  position: relative;
+  display: none;
   width: 60px;
-  display: flex;
   justify-content: center;
   border-radius: 0 25px 25px 0;
   background-color: #99E2D0;
@@ -104,13 +103,13 @@ li.presentation .select {
   transition: all 2000ms;
 }
 li.presentation .fa-circle-check {
-  position: absolute;
   font-size: 30px;
   margin: 25px;
   color: white;
   transition: transform 1000ms;
 }
 li.presentation:hover .select {
+  display: flex;
   transform: translateX(-60px);
 }
 li.presentation:hover .fa-circle-check {
@@ -429,8 +428,10 @@ h2.type {
   text-transform: uppercase;
   color: black;
   margin-left: 15px;
+  padding-bottom: 10px;
   font-size: 15px;
   border-bottom: 2px solid #99E2D0;
+  width: 40px;
 }
 
 /*# sourceMappingURL=style.css.map */
