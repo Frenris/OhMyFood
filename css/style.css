@@ -338,6 +338,17 @@ a {
   color: #9356DC;
 }
 
+@media screen and (min-width: 1040px) {
+  #functioning article {
+    display: flex;
+  }
+  #functioning article #first, #functioning article #second, #functioning article #third {
+    width: 33%;
+  }
+  .number {
+    margin-top: 17px;
+  }
+}
 #restaurants {
   margin: 0;
   padding-left: 15px;
@@ -417,6 +428,11 @@ a {
   padding: 1px;
 }
 
+@media screen and (min-width: 1040px) {
+  .list {
+    display: flex;
+  }
+}
 main {
   display: flex;
   flex-direction: column;

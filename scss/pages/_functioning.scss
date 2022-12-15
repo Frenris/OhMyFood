@@ -38,3 +38,18 @@ a {
         }
     }
 }
+
+@media screen and (min-width: 1040px) {
+    #functioning {
+        article {
+            display: flex;
+            #first, #second, #third {
+                width: 33%;
+            }
+        }
+    }
+
+    .number  {
+        margin-top: 17px;
+    }
+}
