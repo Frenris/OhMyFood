@@ -5,7 +5,7 @@
 .number p {
     position: absolute;
     color:white;
-    margin: 25px 0 0 15px;
+    margin: 25px 0px 0 5px;
     background-color: $primary-color;
     border: 1px solid $primary-color;
     border-radius: 20px;
@@ -37,14 +37,18 @@ a {
             color: $primary-color;
         }
     }
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 @media screen and (min-width: 1040px) {
     #functioning {
         article {
             display: flex;
+            justify-content: space-around;
             #first, #second, #third {
-                width: 33%;
+                width: 30%;
             }
         }
     }
@@ -53,3 +57,4 @@ a {
         margin-top: 17px;
     }
 }
+
