@@ -29,28 +29,20 @@
     }
 }
 
-@keyframes opacity-loader {
-    0% {
-        opacity: 1;
-       }
-    80% {
-        opacity: 1;
-       }
-    100% {
-        opacity: 0;
-       }
+@keyframes fade {
+    from {opacity: 1;}
+    to {opacity: 0.25;}
 }
 
-@keyframes loading {
+@keyframes opacity-loader {
     0% {
-        transform: rotate(0deg);
-        color: $primary-color;
+        opacity:1;
     }
-    50% {
-        color: $secondary-color;
+    80% {
+        opacity:1;
     }
     100% {
-        transform: rotate(360deg);
-        color: $primary-color;
+        opacity:0;
+        display: none;
     }
 }
