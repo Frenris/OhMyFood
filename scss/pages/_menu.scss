@@ -5,7 +5,7 @@
     background-color: $grey-light;
     border-top-left-radius: 25px;
     border-top-right-radius: 25px;
-    margin-top: -40px;
+    margin-top: -20px;
     article .plate .starter-1, article .plate .plate-1, article .plate .dessert-1{
         opacity: 0;
         animation: opacity-plate 600ms 200ms;
@@ -21,6 +21,11 @@
         animation: opacity-plate 600ms 600ms;
         animation-fill-mode: forwards;
     }
+    article .plate .starter-4, article .plate .plate-4, article .plate .dessert-4{
+        opacity: 0;
+        animation: opacity-plate 600ms 800ms;
+        animation-fill-mode: forwards;
+    }
 }
 
 h2.type {
@@ -33,5 +38,12 @@ h2.type {
     width: 40px;
 }
 
-
+@media screen and (min-width: 1040px) {
+    .menu {
+        flex-direction: row;
+        article {
+            width: 33%;
+        }
+    }
+}
 

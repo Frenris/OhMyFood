@@ -7,6 +7,21 @@
     transform: translateY(-10px);
   }
 }
+@keyframes appearance {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
 @keyframes opacity-loader {
   0% {
     opacity: 1;
@@ -87,62 +102,74 @@ ul.plate {
 
 li.presentation {
   display: flex;
+  align-items: center;
   justify-content: space-between;
   background-color: white;
-  border-radius: 25px;
-  padding: 1px 5px;
-  margin: 15px;
+  border-radius: 20px;
+  margin: 3%;
+  overflow: hidden;
+  animation: appearence 2s ease;
 }
-li.presentation .select {
-  display: none;
-  width: 60px;
-  justify-content: center;
-  border-radius: 0 25px 25px 0;
-  background-color: #99E2D0;
-  translate: 65px;
-  transition: all 2000ms;
+li.presentation .cooking {
+  margin-left: 20px;
+  width: 90%;
 }
-li.presentation .fa-circle-check {
-  font-size: 30px;
-  margin: 25px;
+li.presentation .cooking:hover {
+  width: 75%;
+}
+li.presentation .cooking h3 {
+  font-size: 15px;
+  margin-bottom: 0px;
+}
+li.presentation .cooking p {
+  width: 70%;
+  font-size: 12px;
+}
+li.presentation .cooking:hover p {
+  width: 70%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+li.presentation .price {
+  margin-top: 25px;
+  font-size: 14px;
+  font-weight: bold;
+  width: 10%;
+}
+li.presentation .check {
+  margin-right: -150px;
+  background: #99E2D0;
   color: white;
-  transition: transform 1000ms;
+  width: 15%;
+  border-radius: 0 20px 20px 0;
+  padding: 5px 0;
+  transition: margin-right 500ms;
 }
-li.presentation:hover .select {
+li.presentation .checked {
   display: flex;
-  transform: translateX(-60px);
+  justify-content: center;
+  font-size: 20px;
+  margin: 20px;
 }
-li.presentation:hover .fa-circle-check {
-  transform: rotate(360deg);
+li.presentation:hover .check {
+  margin-right: 0px;
+}
+li.presentation:hover .checked {
+  animation: rotate 0.8s;
 }
 
 li.starter-1, li.plate-1, li.dessert-1 {
   margin-top: 30px;
 }
 
-.cooking {
-  width: 100%;
-}
-
-h3.title {
-  font-size: 15px;
-  margin-bottom: 5px;
-}
-
-.recipe, .price {
-  font-size: 12px;
-}
-
-.recipe {
-  display: flex;
-  justify-content: space-between;
-  background-color: blueviolet;
-}
-
 body {
   position: relative;
   font-family: "Roboto", sans-serif;
   margin: 0px;
+}
+
+main {
+  background-color: rgb(235, 235, 235);
 }
 
 #loader {
@@ -211,6 +238,17 @@ footer ul li a {
   padding: 15px;
 }
 
+@media screen and (min-width: 780px) {
+  footer .footer__heading {
+    display: flex;
+    justify-content: center;
+  }
+  footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+  }
+}
 #location {
   background-color: rgb(223, 223, 223);
 }
@@ -387,11 +425,11 @@ main {
 .restaurant__picture img {
   object-fit: cover;
   width: 100%;
+  height: 200px;
 }
 .restaurant__heading {
   font-family: "Shrikhand", sans-serif;
-  margin: 0 15px;
-  padding-top: 15px;
+  padding: 5px;
 }
 
 .title {
@@ -406,7 +444,7 @@ main {
   background-color: rgb(235, 235, 235);
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
-  margin-top: -40px;
+  margin-top: -20px;
 }
 .menu article .plate .starter-1, .menu article .plate .plate-1, .menu article .plate .dessert-1 {
   opacity: 0;
@@ -423,6 +461,11 @@ main {
   animation: opacity-plate 600ms 600ms;
   animation-fill-mode: forwards;
 }
+.menu article .plate .starter-4, .menu article .plate .plate-4, .menu article .plate .dessert-4 {
+  opacity: 0;
+  animation: opacity-plate 600ms 800ms;
+  animation-fill-mode: forwards;
+}
 
 h2.type {
   text-transform: uppercase;
@@ -432,6 +475,15 @@ h2.type {
   font-size: 15px;
   border-bottom: 2px solid #99E2D0;
   width: 40px;
+}
+
+@media screen and (min-width: 1040px) {
+  .menu {
+    flex-direction: row;
+  }
+  .menu article {
+    width: 33%;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

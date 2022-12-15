@@ -4,6 +4,10 @@ body {
     margin: 0px;
 }
 
+main {
+    background-color: $grey-light;
+}
+
 #loader {
     z-index: 1;
     position:absolute;

@@ -5,56 +5,66 @@ ul.plate {
 
 li.presentation {
     display: flex;
+    align-items: center;
     justify-content: space-between;
     background-color: white;
-    border-radius: 25px;
-    padding: 1px 5px;
-    margin: 15px;
-    .select {
-        display: none;
-        width:60px;
-        justify-content: center;
-        border-radius: 0 25px 25px 0;
-        background-color: $tertiary-color;
-        translate: 65px;
-        transition: all 2000ms;
+    border-radius: 20px;
+    margin: 3%;
+    overflow:hidden;
+    animation: appearence 2s ease;
+    .cooking {
+        margin-left: 20px;
+        width: 90%;
+        &:hover {
+            width: 75%;
+        }
+        h3 {
+            font-size: 15px;
+            margin-bottom: 0px;
+        }
+         p {
+        width: 70%;
+        font-size: 12px;
+        }
+        &:hover {
+            p {
+                width: 70%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+            }
+        }
     }
-    .fa-circle-check {
-        font-size: 30px;
-        margin: 25px;
+    .price {
+        margin-top: 25px;
+        font-size: 14px;
+        font-weight: bold;
+        width: 10%;
+    }
+    .check {
+        margin-right: -150px;
+        background: $tertiary-color;
         color: white;
-        transition: transform 1000ms;
+        width:15%;
+        border-radius: 0 20px 20px 0;
+        padding: 5px 0;
+        transition: margin-right 500ms;
+    }
+    .checked {
+        display:flex;
+        justify-content: center;
+        font-size: 20px;
+        margin: 20px;
     }
     &:hover {
-        .select{
-            display: flex;
-            transform: translateX(-60px);
+        .check{
+            margin-right: 0px;
         }
-        .fa-circle-check{
-            transform: rotate(360deg);
+        .checked{
+            animation: rotate 0.8s;
         }
     }
 }
 
 li.starter-1, li.plate-1, li.dessert-1 {
     margin-top: 30px;
-}
-
-.cooking {
-    width: 100%;
-}
-
-h3.title {
-    font-size: 15px;
-    margin-bottom: 5px;
-}
-
-.recipe, .price {
-    font-size: 12px;
-}
-
-.recipe {
-    display: flex;
-    justify-content: space-between;
-    background-color: blueviolet;
 }
