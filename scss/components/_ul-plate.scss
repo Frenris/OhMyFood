@@ -13,34 +13,38 @@ li.presentation {
     overflow:hidden;
     animation: appearence 2s ease;
     .cooking {
-        margin-left: 20px;
-        width: 90%;
-        &:hover {
-            width: 75%;
-        }
+        display: flex;
+        flex-direction: column;
+        width: 95%;
+        margin: 0 2%;
         h3 {
             font-size: 15px;
             margin-bottom: 0px;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
         }
-         p {
-        width: auto;
-        font-size: 12px;
-        }
-        &:hover {
+        .recipe {
+            display:flex;
+            justify-content: space-between;
             p {
-                width: 70%;
-                white-space: nowrap;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                overflow: hidden;
+            font-size: 12px;
+            }
+            &:hover {
+                p {
+                    width: 70%;
+                    white-space: nowrap;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                }
+            }
+            .price {
+                font-size: 14px;
+                font-weight: bold;
+                margin: 10px 0;
             }
         }
-    }
-    .price {
-        margin-top: 25px;
-        font-size: 14px;
-        font-weight: bold;
-        width: 10%;
     }
     .check {
         margin-right: -150px;
@@ -66,6 +70,7 @@ li.presentation {
         }
     }
 }
+
 
 li.starter-1, li.plate-1, li.dessert-1 {
     margin-top: 30px;

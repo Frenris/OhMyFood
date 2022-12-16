@@ -23,3 +23,16 @@ footer {
         padding: 15px;
     }
 }
+
+@media screen and (min-width: 780px) {
+    footer ul {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer {
+        &__heading {
+            display: flex;
+            justify-content: center;
+        }
+    }
+}
