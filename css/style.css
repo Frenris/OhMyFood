@@ -285,6 +285,7 @@ footer .fa-utensils, footer .fa-handshake-angle {
   padding: 0 10px 0 0;
 }
 footer ul {
+  list-style-type: none;
   margin: 0;
   padding-bottom: 16px;
 }
@@ -482,6 +483,11 @@ a {
   padding: 1px;
 }
 
+@media screen and (min-width: 1040px) {
+  .list {
+    display: flex;
+  }
+}
 main {
   display: flex;
   flex-direction: column;
