@@ -174,7 +174,7 @@ main {
   width: 100%;
   height: 100%;
   display: inline-block;
-  background: white;
+  background: rgb(235, 235, 235);
   animation: opacity-loader 5s;
   animation-fill-mode: forwards;
 }
