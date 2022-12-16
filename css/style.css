@@ -118,19 +118,21 @@ li.presentation .cooking h3 {
   margin-bottom: 0px;
 }
 li.presentation .cooking p {
-  width: 70%;
+  width: auto;
   font-size: 12px;
 }
 li.presentation .cooking:hover p {
   width: 70%;
   white-space: nowrap;
   text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }
 li.presentation .price {
   margin-top: 25px;
   font-size: 14px;
   font-weight: bold;
-  width: 4%;
+  width: 10%;
 }
 li.presentation .check {
   margin-right: -150px;

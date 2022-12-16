@@ -23,7 +23,7 @@ li.presentation {
             margin-bottom: 0px;
         }
          p {
-        width: 70%;
+        width: auto;
         font-size: 12px;
         }
         &:hover {
@@ -31,6 +31,8 @@ li.presentation {
                 width: 70%;
                 white-space: nowrap;
                 text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
     }
@@ -38,7 +40,7 @@ li.presentation {
         margin-top: 25px;
         font-size: 14px;
         font-weight: bold;
-        width: 4%;
+        width: 10%;
     }
     .check {
         margin-right: -150px;
