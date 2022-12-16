@@ -22,19 +22,3 @@ footer {
         padding: 15px;
     }
 }
-
-@media screen and (min-width: 780px) {
-    footer {
-        .footer {
-            &__heading {
-                display: flex;
-                justify-content: center;
-            }
-        }
-        ul {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-around;
-        }
-    }
-}
