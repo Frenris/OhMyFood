@@ -85,3 +85,9 @@
     padding: 1px;
     
 }
+
+@media screen and (min-width: 1040px) {
+    .list {
+        display: flex;
+    }
+}
