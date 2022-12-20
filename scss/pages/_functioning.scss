@@ -2,6 +2,13 @@
     margin-left: 15px;
 }
 
+#functioning {
+    &__heading {
+        font-family: 'Shrikhand', sans-serif;
+        padding: 5px;
+    }
+}
+
 .number p {
     position: absolute;
     color:white;
