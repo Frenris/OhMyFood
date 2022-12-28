@@ -120,15 +120,15 @@ li.presentation .cooking {
   width: 95%;
   margin: 0 2%;
 }
-li.presentation .cooking h3 {
-  font-size: 15px;
-  margin-bottom: 0px;
-}
-li.presentation .cooking:hover h3 {
+li.presentation .cooking:hover h3, li.presentation .cooking:hover .recipe p {
   width: 70%;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
+}
+li.presentation .cooking h3 {
+  font-size: 15px;
+  margin-bottom: 0px;
 }
 li.presentation .cooking .recipe {
   display: flex;
@@ -136,12 +136,6 @@ li.presentation .cooking .recipe {
 }
 li.presentation .cooking .recipe p {
   font-size: 12px;
-}
-li.presentation .cooking .recipe:hover p {
-  width: 70%;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 li.presentation .cooking .recipe .price {
   font-size: 14px;
@@ -533,7 +527,7 @@ main {
 }
 
 .title {
-  display: flex;
+  display: block;
   justify-content: space-between;
 }
 
