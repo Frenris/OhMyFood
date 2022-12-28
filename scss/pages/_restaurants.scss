@@ -67,7 +67,7 @@
 				background-clip: text;
 				-webkit-background-clip: text;
 				color: transparent;
-				transform: scale(1);
+				animation: scale-heart 600ms;
             }
         }
     }
@@ -76,13 +76,12 @@
 
 .new__restaurant {
     position:absolute;
-    top: 15px;
-    right: 15px;
-    justify-content:center;
+    top: 10px;
+    right: 10px;
     color: green;
     background-color: $tertiary-color;
-    width: 75px;
-    padding: 1px;
+    padding: 5px 10px;
+    line-height: 0px;
     
 }
 

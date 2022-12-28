@@ -1,3 +1,11 @@
+@keyframes scale-heart {
+  0% {
+    scale: 0;
+  }
+  100% {
+    scale: 1;
+  }
+}
 @keyframes opacity-plate {
   0% {
     opacity: 0;
@@ -115,9 +123,12 @@ li.presentation .cooking {
 li.presentation .cooking h3 {
   font-size: 15px;
   margin-bottom: 0px;
+}
+li.presentation .cooking:hover h3 {
+  width: 70%;
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
+  overflow: hidden;
 }
 li.presentation .cooking .recipe {
   display: flex;
@@ -128,7 +139,6 @@ li.presentation .cooking .recipe p {
 }
 li.presentation .cooking .recipe:hover p {
   width: 70%;
-  white-space: nowrap;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
@@ -367,6 +377,11 @@ h1 {
   margin-left: 15px;
 }
 
+#functioning__heading {
+  font-family: "Shrikhand", sans-serif;
+  padding: 5px;
+}
+
 .number p {
   position: absolute;
   color: white;
@@ -484,18 +499,17 @@ a {
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
-  transform: scale(1);
+  animation: scale-heart 600ms;
 }
 
 .new__restaurant {
   position: absolute;
-  top: 15px;
-  right: 15px;
-  justify-content: center;
+  top: 10px;
+  right: 10px;
   color: green;
   background-color: #99E2D0;
-  width: 75px;
-  padding: 1px;
+  padding: 5px 10px;
+  line-height: 0px;
 }
 
 @media screen and (min-width: 1040px) {

@@ -20,9 +20,15 @@ li.presentation {
         h3 {
             font-size: 15px;
             margin-bottom: 0px;
-            text-overflow: ellipsis;
-            overflow: hidden;
-            white-space: nowrap;
+        }
+        &:hover {
+            h3 {
+                width: 70%;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
+            }
+            
         }
         .recipe {
             display:flex;
@@ -33,7 +39,6 @@ li.presentation {
             &:hover {
                 p {
                     width: 70%;
-                    white-space: nowrap;
                     text-overflow: ellipsis;
                     white-space: nowrap;
                     overflow: hidden;
